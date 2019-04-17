@@ -41,3 +41,8 @@ It will rely on [Camel VS Code extension](https://marketplace.visualstudio.com/i
        "plugins": "che-machine-exec-plugin:0.0.1,https://raw.githubusercontent.com/apupier/che-plugin-registry/109-AddApacheCamelVSCodeExtension/plugins/camel-tooling.vscode-apache-camel:0.0.14"
     }
  ```
+ 
+ additional tips for debugging:
+ 
+ - if on che.openshift.io, in Terminal, you can type echo ${CHE_OSO_CLUSTER//api/console} to have access to the OpenShift console url and investigate for all containers/pods deployed.
+ - if you want to add several plugins in the "attributes", it is possible. you might need to also limit the memory size, it is another parameter following "sidecar.org.eclipse.che.editor.<pluginId>.memory_limit": "512Mi" pattern
